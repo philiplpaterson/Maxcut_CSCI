@@ -76,15 +76,20 @@ def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph) 
 	curr_solution = copy.deepcopy(init_solution)
 	curr_score = obj_maxcut(curr_solution, adj_matrix)
 	init_score = curr_score
-	scores = []
+
+	best_solution = curr_solution
+	best_score = curr_score
+
 	for k in range(num_steps):
 		# The temperature decreases
 		temperature = init_temperature * (1 - (k + 1) / num_steps)
-		new_solution = copy.deepcopy(curr_solution)
+
+		new_solution = curr_solution.copy()
 		idx = np.random.randint(0, num_nodes)
 		new_solution[idx] = (new_solution[idx] + 1) % 2
+		
 		new_score = obj_maxcut(new_solution, adj_matrix)
-		scores.append(new_score)
+
 		delta_e = curr_score - new_score
 		if delta_e < 0:
 			curr_solution = new_solution
@@ -94,12 +99,15 @@ def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph) 
 			if prob > random.random():
 				curr_solution = new_solution
 				curr_score = new_score
-	print("score, init_score of simulated_annealing", curr_score, init_score)
-	print("scores: ", scores)
-	print("solution: ", curr_solution)
+
+		if new_score>best_score:
+			best_score = new_score
+			best_solution = new_solution
+
+	print("score, init_score of simulated_annealing", best_score, init_score)
 	running_duration = time.time() - start_time
 	print('running_duration: ', running_duration)
-	return curr_score, curr_solution, scores
+	return best_score, best_solution
 
 if __name__ == '__main__':
 
@@ -108,10 +116,12 @@ if __name__ == '__main__':
 	# init_solution = list(np.random.randint(0, 2, graph.number_of_nodes()))
 
 	# read data
-	graph = read_nxgraph('./data/syn/syn_50_176.txt')
+	graph = read_nxgraph('data/syn/powerlaw_500_ID0.txt')
 	init_temperature = 1.25
-	num_steps = 20000
-	sa_score, sa_solution, sa_scores = simulated_annealing(init_temperature, num_steps, graph)
+	num_steps = 10000
+	sa_score, sa_solution = simulated_annealing(init_temperature, num_steps, graph)
+
+	print('Gamma:', (1470-sa_score)/1470)
 
 
 
