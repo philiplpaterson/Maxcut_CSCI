@@ -13,6 +13,7 @@ from util import obj_maxcut2
 from itertools import combinations
 
 np.random.seed(0)
+random.seed(0)
 
 
 class Solution():
@@ -120,6 +121,12 @@ def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph) 
 	print('running_duration: ', running_duration)
 	return best_score, best_solution
 
+def flip_one_value_vectorized(tensor):
+	n = tensor.size(0)
+	identity = torch.eye(n, dtype=torch.int)
+	flipped_matrices = (identity + tensor.unsqueeze(1)) % 2
+	return flipped_matrices
+
 def simulated_annealing_tensor(init_temperature: int, num_steps: int, graph: nx.Graph) -> (int, Union[List[int], np.array], List[int]):
 	print('simulated_annealing')
 	
@@ -143,27 +150,25 @@ def simulated_annealing_tensor(init_temperature: int, num_steps: int, graph: nx.
 		# The temperature decreases
 		temperature = init_temperature * (1 - (k + 1) / num_steps)
 
-		new_solution = curr_solution.copy()
-		new_solution[k%num_nodes] = (new_solution[k%num_nodes] + 1) % 2
-		ctr+=1
+		new_solutions = flip_one_value_vectorized(curr_solution)
 
-		new_score = obj_maxcut2(torch.tensor(new_solution), torch.tensor(adj_matrix))
+		new_score = obj_maxcut2(torch.tensor(new_solutions), torch.tensor(adj_matrix))
 
 		delta_e = curr_score - new_score
 		if delta_e < 0 or ctr>=num_nodes:
-			curr_solution = new_solution
+			curr_solution = new_solutions
 			curr_score = new_score
 			ctr = 0
 		else:
 			prob = np.exp(- delta_e / (temperature + 1e-6))
 			if prob > random.random():
-				curr_solution = new_solution
+				curr_solution = new_solutions
 				curr_score = new_score
 				ctr = 0
 
 		if new_score>best_score:
 			best_score = new_score
-			best_solution = new_solution
+			best_solution = new_solutions
 			pbar.set_description(f'Simulated Annealing, Score: {best_score}')
 
 		pbar.update()

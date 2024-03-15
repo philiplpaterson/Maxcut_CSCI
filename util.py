@@ -98,7 +98,6 @@ def obj_maxcut(result: np.ndarray, adj_matrix:np.ndarray):
     return (temp - np.sum(adj_matrix))//2
 
 def obj_maxcut2(result: torch.Tensor, adj_matrix: torch.Tensor):
-
     adj_matrix = adj_matrix.clone()
     temp = torch.sum(adj_matrix)
 
