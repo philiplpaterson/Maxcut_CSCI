@@ -8,8 +8,9 @@ import random
 import networkx as nx
 from util import read_nxgraph
 from util import obj_maxcut
+from util import schedule
 
-def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph) -> (int, Union[List[int], np.array], List[int]):
+def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph, decay_factor: float) -> (int, Union[List[int], np.array], List[int]):
     print('simulated_annealing')
 
     init_solution = [0] * int(graph.number_of_nodes() / 2) + [1] * int(graph.number_of_nodes() / 2)
@@ -22,10 +23,12 @@ def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph) 
     scores = []
     for k in range(num_steps):
         # The temperature decreases
-        temperature = init_temperature * (1 - (k + 1) / num_steps)
+        # temperature = init_temperature * (1 - (k + 1) / num_steps)
+        temperature = schedule(init_temperature, decay_factor, k, num_steps, type='exponential')
         new_solution = copy.deepcopy(curr_solution)
         idx = np.random.randint(0, num_nodes)
-        new_solution[idx] = (new_solution[idx] + 1) % 2
+        # idx = int(random.betavariate(0.2,0.6) * num_nodes)
+        new_solution[idx] = (new_solution[idx] + 1) % 2 # Flips the solution value of the node
         new_score = obj_maxcut(new_solution, graph)
         scores.append(new_score)
         delta_e = curr_score - new_score
@@ -51,11 +54,14 @@ if __name__ == '__main__':
     # init_solution = list(np.random.randint(0, 2, graph.number_of_nodes()))
 
     # read data
-    graph = read_nxgraph('./data/syn/syn_50_176.txt')
+    graph = read_nxgraph('./data/syn/powerlaw_500_ID0.txt')
     init_temperature = 4
-    num_steps = 2000
-    sa_score, sa_solution, sa_scores = simulated_annealing(init_temperature, num_steps, graph)
-
+    num_steps = 4000
+    decay_factor = 0.99  # Adjust this value as needed
+    sa_score, sa_solution, sa_scores = simulated_annealing(init_temperature, num_steps, graph, decay_factor)
+    
+    
+    print('Gamma:', (1470-sa_score)/1470)
 
 
 

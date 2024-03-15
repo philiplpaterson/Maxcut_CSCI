@@ -85,21 +85,28 @@ def transfer_weightmatrix_to_nxgraph(weightmatrix: List[List[int]], num_nodes: i
         graph.add_edge(i, j, weight=weight)
     return graph
 
-# max total cuts
+# # max total cuts
+# def obj_maxcut(result: Union[Tensor, List[int], np.array], graph: nx.Graph):
+#     num_nodes = len(result)
+#     obj = 0
+#     adj_matrix = transfer_nxgraph_to_adjacencymatrix(graph)
+#     for i in range(num_nodes):
+#         for j in range(i + 1, num_nodes):
+#             if result[i] != result[j]:
+#                 obj += adj_matrix[(i, j)]
+#     return obj
+
 def obj_maxcut(result: Union[Tensor, List[int], np.array], graph: nx.Graph):
-    num_nodes = len(result)
-    obj = 0
-    adj_matrix = transfer_nxgraph_to_adjacencymatrix(graph)
-    for i in range(num_nodes):
-        for j in range(i + 1, num_nodes):
-            if result[i] != result[j]:
-                obj += adj_matrix[(i, j)]
-    return obj
+    if type(result)!= np.ndarray:
+        result = np.array(result)
 
+    adj_matrix = nx.to_numpy_array(graph)
+    temp = np.sum(adj_matrix)
 
+    mask = (result[:, None] != result[None, :])
+    adj_matrix[mask] = 0
 
-
-
+    return (temp - np.sum(adj_matrix))/2
 
 
 def load_graph_from_txt(txt_path: str = './data/gset_14.txt'):
@@ -126,3 +133,14 @@ def save_graph_info_to_txt(txt_path, graph, num_nodes, num_edges):
     with open(txt_path, "w") as file:
         file.write(formatted_content)
 
+def schedule(temperature, decay_factor, k, num_steps, type):
+    if type == 'exponential':
+        new_temp = temperature * (decay_factor ** k)
+    elif type == 'logarithmic':
+        new_temp = temperature / (1 + decay_factor * np.log(1 + k))
+    elif type == 'quadratic':
+        new_temp = temperature / (1 + decay_factor * k**2)
+    else:
+        new_temp = temperature * (1 - (k + 1) / num_steps)
+
+    return new_temp
