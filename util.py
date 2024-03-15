@@ -86,18 +86,16 @@ def transfer_weightmatrix_to_nxgraph(weightmatrix: List[List[int]], num_nodes: i
     return graph
 
 # max total cuts
-def obj_maxcut(result: Union[Tensor, List[int], np.array], graph: nx.Graph):
-    num_nodes = len(result)
-    obj = 0
-    adj_matrix = transfer_nxgraph_to_adjacencymatrix(graph)
-    for i in range(num_nodes):
-        for j in range(i + 1, num_nodes):
-            if result[i] != result[j]:
-                obj += adj_matrix[(i, j)]
-    return obj
+def obj_maxcut(result: np.ndarray, adj_matrix:np.ndarray):
 
+    #adj_matrix = nx.to_numpy_array(graph)
+    adj_matrix = adj_matrix.copy()
+    temp = np.sum(adj_matrix)
 
+    mask = (result[:, None] != result[None, :])
+    adj_matrix[mask] = 0
 
+    return (temp - np.sum(adj_matrix))//2
 
 
 
