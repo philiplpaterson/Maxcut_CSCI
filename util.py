@@ -106,6 +106,17 @@ def obj_maxcut2(result: torch.Tensor, adj_matrix: torch.Tensor):
 
     return (temp - torch.sum(adj_matrix)) // 2
 
+def obj_maxcut_batch(results: torch.Tensor, adj_matrix: torch.Tensor):
+    adj_matrix = adj_matrix.clone()
+
+    stacked_adj_matrix = adj_matrix.repeat(len(results), 1, 1)
+    temp = torch.sum(stacked_adj_matrix, dim=(1,2))
+
+    mask = (results[:, None, :] != results[:, :, None])
+    stacked_adj_matrix[mask] = 0
+
+    return (temp - torch.sum(stacked_adj_matrix, dim=(1,2))) // 2
+
 
 
 

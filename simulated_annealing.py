@@ -9,11 +9,13 @@ import networkx as nx
 from util import read_nxgraph
 from util import obj_maxcut
 from util import obj_maxcut2
+from util import obj_maxcut_batch
 
 from itertools import combinations
 
 np.random.seed(0)
 random.seed(0)
+torch.manual_seed(0)
 
 
 class Solution():
@@ -122,53 +124,50 @@ def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph) 
 	return best_score, best_solution
 
 def flip_one_value_vectorized(tensor):
-	n = tensor.size(0)
+	n = tensor.shape[0]
 	identity = torch.eye(n, dtype=torch.int)
-	flipped_matrices = (identity + tensor.unsqueeze(1)) % 2
+	flipped_matrices = (identity + tensor.repeat(n, 1)) % 2
 	return flipped_matrices
 
 def simulated_annealing_tensor(init_temperature: int, num_steps: int, graph: nx.Graph) -> (int, Union[List[int], np.array], List[int]):
 	print('simulated_annealing')
 	
-	adj_matrix = nx.to_numpy_array(graph)
+	adj_matrix = torch.tensor(nx.to_numpy_array(graph))
 	num_nodes = graph.number_of_nodes()
 
 	#init_solution = np.concatenate((np.zeros(num_nodes // 2, dtype=int), np.ones(num_nodes // 2, dtype=int)))
-	init_solution = get_init_guess(graph)
+	init_solution = torch.tensor(get_init_guess(graph))
 
 	start_time = time.time()
-	curr_solution = copy.deepcopy(init_solution)
-	curr_score = obj_maxcut2(torch.tensor(curr_solution), torch.tensor(adj_matrix))
+	curr_solution = init_solution
+	curr_score = obj_maxcut2(curr_solution, adj_matrix)
 	init_score = curr_score
 
 	best_solution = curr_solution
 	best_score = curr_score
 
 	pbar = tqdm.tqdm(range(num_steps), f'Simulated Annealing, Score: {best_score}')
-	ctr = 0
 	for k in range(num_steps):
-		# The temperature decreases
-		temperature = init_temperature * (1 - (k + 1) / num_steps)
-
 		new_solutions = flip_one_value_vectorized(curr_solution)
 
-		new_score = obj_maxcut2(torch.tensor(new_solutions), torch.tensor(adj_matrix))
+		new_scores = obj_maxcut_batch(new_solutions, adj_matrix)
+		best_sol_idx = torch.argmax(new_scores)
 
-		delta_e = curr_score - new_score
-		if delta_e < 0 or ctr>=num_nodes:
-			curr_solution = new_solutions
-			curr_score = new_score
-			ctr = 0
+		delta_e = curr_score - new_scores[best_sol_idx]
+		if delta_e < 0:
+			curr_solution = new_solutions[best_sol_idx]
+			curr_score = new_scores[best_sol_idx]
 		else:
-			prob = np.exp(- delta_e / (temperature + 1e-6))
-			if prob > random.random():
-				curr_solution = new_solutions
-				curr_score = new_score
-				ctr = 0
+			#normalize score tensor and generate sample
+			probability_distribution = torch.nn.functional.softmax(new_scores, dim=-1)
+			sampled_index = torch.multinomial(probability_distribution, 1).item()
 
-		if new_score>best_score:
-			best_score = new_score
-			best_solution = new_solutions
+			curr_solution = new_solutions[sampled_index]
+			curr_score = new_scores[sampled_index]
+
+		if new_scores[best_sol_idx]>best_score:
+			best_score = new_scores[best_sol_idx]
+			best_solution = new_solutions[best_sol_idx]
 			pbar.set_description(f'Simulated Annealing, Score: {best_score}')
 
 		pbar.update()
@@ -180,13 +179,23 @@ def simulated_annealing_tensor(init_temperature: int, num_steps: int, graph: nx.
 
 if __name__ == '__main__':
 
+	# # read data
+	# graph = read_nxgraph('data/syn/powerlaw_500_ID1.txt')
+	# init_temperature = 1.5 #Best so far
+	# num_steps = 100000 #Best so far
+	# # init_temperature = 1.5
+	# # num_steps = 10000
+	# sa_score, sa_solution = simulated_annealing(init_temperature, num_steps, graph)
+
+	# print('Solution:', sa_solution)
+	# print('Gamma:', (1470-sa_score)/1470)
+
+
 	# read data
 	graph = read_nxgraph('data/syn/powerlaw_500_ID0.txt')
 	init_temperature = 1.5 #Best so far
-	num_steps = 100000 #Best so far
-	# init_temperature = 1.5
-	# num_steps = 10000
-	sa_score, sa_solution = simulated_annealing(init_temperature, num_steps, graph)
+	num_steps = 1000 #Best so far
+	sa_score, sa_solution = simulated_annealing_tensor(init_temperature, num_steps, graph)
 
 	print('Solution:', sa_solution)
 	print('Gamma:', (1470-sa_score)/1470)
