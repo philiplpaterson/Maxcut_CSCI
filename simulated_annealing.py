@@ -131,7 +131,7 @@ def flip_one_value_vectorized(tensor):
 	flipped_matrices = (identity + tensor.repeat(n, 1)) % 2
 	return flipped_matrices
 
-def simulated_annealing_tensor(num_steps: int, graph: nx.Graph) -> (int, Union[List[int], np.array], List[int]):
+def simulated_annealing_tensor(num_steps: int, graph: nx.Graph, init_temp:float) -> (int, Union[List[int], np.array], List[int]):
 	print('simulated_annealing')
 	
 	adj_matrix = torch.tensor(nx.to_numpy_array(graph)).to(device)
@@ -155,6 +155,8 @@ def simulated_annealing_tensor(num_steps: int, graph: nx.Graph) -> (int, Union[L
 		new_scores = obj_maxcut_batch(new_solutions, adj_matrix)
 		best_sol_idx = torch.argmax(new_scores)
 
+		temperature = init_temp * (1 - (k + 1) / num_steps)
+
 		delta_e = curr_score - new_scores[best_sol_idx]
 		if delta_e < 0:
 			curr_solution = new_solutions[best_sol_idx]
@@ -162,6 +164,7 @@ def simulated_annealing_tensor(num_steps: int, graph: nx.Graph) -> (int, Union[L
 		else:
 			#normalize score tensor and generate sample
 			probability_distribution = torch.nn.functional.softmax(new_scores, dim=-1)
+			#probability_distribution = torch.nn.functional.softmax(new_scores*(1-k/num_steps)*temperature, dim=-1)
 			sampled_index = torch.multinomial(probability_distribution, 1).item()
 
 			curr_solution = new_solutions[sampled_index]
@@ -195,8 +198,9 @@ if __name__ == '__main__':
 
 	# read data
 	graph = read_nxgraph('data/syn/powerlaw_500_ID1.txt')
-	num_steps = 1000 #Best so far
-	sa_score, sa_solution = simulated_annealing_tensor(num_steps, graph)
+	init_temp = 1.5
+	num_steps = 10000 #Best so far
+	sa_score, sa_solution = simulated_annealing_tensor(num_steps, graph, init_temp)
 
 	print('Solution:', sa_solution)
 	print('Gamma:', (1470-sa_score)/1470)
