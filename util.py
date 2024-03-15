@@ -1,4 +1,4 @@
-import os
+import os, torch
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 import copy
 from torch.autograd import Variable
@@ -96,6 +96,16 @@ def obj_maxcut(result: np.ndarray, adj_matrix:np.ndarray):
     adj_matrix[mask] = 0
 
     return (temp - np.sum(adj_matrix))//2
+
+def obj_maxcut2(result: torch.Tensor, adj_matrix: torch.Tensor):
+
+    adj_matrix = adj_matrix.clone()
+    temp = torch.sum(adj_matrix)
+
+    mask = (result[:, None] != result[None, :])
+    adj_matrix[mask] = 0
+
+    return (temp - torch.sum(adj_matrix)) // 2
 
 
 

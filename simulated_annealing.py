@@ -1,4 +1,4 @@
-import sys, math
+import sys, math, tqdm, torch
 
 import copy
 import time
@@ -8,8 +8,11 @@ import random
 import networkx as nx
 from util import read_nxgraph
 from util import obj_maxcut
+from util import obj_maxcut2
 
 from itertools import combinations
+
+np.random.seed(0)
 
 
 class Solution():
@@ -70,7 +73,8 @@ def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph) 
 	adj_matrix = nx.to_numpy_array(graph)
 	num_nodes = graph.number_of_nodes()
 
-	init_solution = np.concatenate((np.zeros(num_nodes // 2, dtype=int), np.ones(num_nodes // 2, dtype=int)))
+	#init_solution = np.concatenate((np.zeros(num_nodes // 2, dtype=int), np.ones(num_nodes // 2, dtype=int)))
+	init_solution = get_init_guess(graph)
 
 	start_time = time.time()
 	curr_solution = copy.deepcopy(init_solution)
@@ -80,29 +84,89 @@ def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph) 
 	best_solution = curr_solution
 	best_score = curr_score
 
+	pbar = tqdm.tqdm(range(num_steps), f'Simulated Annealing, Score: {best_score}')
+	ctr = 0
 	for k in range(num_steps):
 		# The temperature decreases
 		temperature = init_temperature * (1 - (k + 1) / num_steps)
 
 		new_solution = curr_solution.copy()
-		idx = np.random.randint(0, num_nodes)
-		new_solution[idx] = (new_solution[idx] + 1) % 2
-		
+		new_solution[k%num_nodes] = (new_solution[k%num_nodes] + 1) % 2
+		ctr+=1
+
 		new_score = obj_maxcut(new_solution, adj_matrix)
 
 		delta_e = curr_score - new_score
-		if delta_e < 0:
+		if delta_e < 0 or ctr>=num_nodes:
 			curr_solution = new_solution
 			curr_score = new_score
+			ctr = 0
 		else:
 			prob = np.exp(- delta_e / (temperature + 1e-6))
 			if prob > random.random():
 				curr_solution = new_solution
 				curr_score = new_score
+				ctr = 0
 
 		if new_score>best_score:
 			best_score = new_score
 			best_solution = new_solution
+			pbar.set_description(f'Simulated Annealing, Score: {best_score}')
+
+		pbar.update()
+
+	print("score, init_score of simulated_annealing", best_score, init_score)
+	running_duration = time.time() - start_time
+	print('running_duration: ', running_duration)
+	return best_score, best_solution
+
+def simulated_annealing_tensor(init_temperature: int, num_steps: int, graph: nx.Graph) -> (int, Union[List[int], np.array], List[int]):
+	print('simulated_annealing')
+	
+	adj_matrix = nx.to_numpy_array(graph)
+	num_nodes = graph.number_of_nodes()
+
+	#init_solution = np.concatenate((np.zeros(num_nodes // 2, dtype=int), np.ones(num_nodes // 2, dtype=int)))
+	init_solution = get_init_guess(graph)
+
+	start_time = time.time()
+	curr_solution = copy.deepcopy(init_solution)
+	curr_score = obj_maxcut2(torch.tensor(curr_solution), torch.tensor(adj_matrix))
+	init_score = curr_score
+
+	best_solution = curr_solution
+	best_score = curr_score
+
+	pbar = tqdm.tqdm(range(num_steps), f'Simulated Annealing, Score: {best_score}')
+	ctr = 0
+	for k in range(num_steps):
+		# The temperature decreases
+		temperature = init_temperature * (1 - (k + 1) / num_steps)
+
+		new_solution = curr_solution.copy()
+		new_solution[k%num_nodes] = (new_solution[k%num_nodes] + 1) % 2
+		ctr+=1
+
+		new_score = obj_maxcut2(torch.tensor(new_solution), torch.tensor(adj_matrix))
+
+		delta_e = curr_score - new_score
+		if delta_e < 0 or ctr>=num_nodes:
+			curr_solution = new_solution
+			curr_score = new_score
+			ctr = 0
+		else:
+			prob = np.exp(- delta_e / (temperature + 1e-6))
+			if prob > random.random():
+				curr_solution = new_solution
+				curr_score = new_score
+				ctr = 0
+
+		if new_score>best_score:
+			best_score = new_score
+			best_solution = new_solution
+			pbar.set_description(f'Simulated Annealing, Score: {best_score}')
+
+		pbar.update()
 
 	print("score, init_score of simulated_annealing", best_score, init_score)
 	running_duration = time.time() - start_time
@@ -111,20 +175,13 @@ def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph) 
 
 if __name__ == '__main__':
 
-
-	# run alg
-	# init_solution = list(np.random.randint(0, 2, graph.number_of_nodes()))
-
 	# read data
 	graph = read_nxgraph('data/syn/powerlaw_500_ID0.txt')
-	init_temperature = 1.25
-	num_steps = 10000
+	init_temperature = 1.5 #Best so far
+	num_steps = 100000 #Best so far
+	# init_temperature = 1.5
+	# num_steps = 10000
 	sa_score, sa_solution = simulated_annealing(init_temperature, num_steps, graph)
 
+	print('Solution:', sa_solution)
 	print('Gamma:', (1470-sa_score)/1470)
-
-
-
-
-
-
