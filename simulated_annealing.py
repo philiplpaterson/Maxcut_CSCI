@@ -16,6 +16,7 @@ from itertools import combinations
 np.random.seed(0)
 random.seed(0)
 torch.manual_seed(0)
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 class Solution():
@@ -123,20 +124,21 @@ def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph) 
 	print('running_duration: ', running_duration)
 	return best_score, best_solution
 
+
 def flip_one_value_vectorized(tensor):
 	n = tensor.shape[0]
-	identity = torch.eye(n, dtype=torch.int)
+	identity = torch.eye(n, dtype=torch.int).to(device)
 	flipped_matrices = (identity + tensor.repeat(n, 1)) % 2
 	return flipped_matrices
 
-def simulated_annealing_tensor(init_temperature: int, num_steps: int, graph: nx.Graph) -> (int, Union[List[int], np.array], List[int]):
+def simulated_annealing_tensor(num_steps: int, graph: nx.Graph) -> (int, Union[List[int], np.array], List[int]):
 	print('simulated_annealing')
 	
-	adj_matrix = torch.tensor(nx.to_numpy_array(graph))
+	adj_matrix = torch.tensor(nx.to_numpy_array(graph)).to(device)
 	num_nodes = graph.number_of_nodes()
 
 	#init_solution = np.concatenate((np.zeros(num_nodes // 2, dtype=int), np.ones(num_nodes // 2, dtype=int)))
-	init_solution = torch.tensor(get_init_guess(graph))
+	init_solution = torch.tensor(get_init_guess(graph)).to(device)
 
 	start_time = time.time()
 	curr_solution = init_solution
@@ -192,10 +194,9 @@ if __name__ == '__main__':
 
 
 	# read data
-	graph = read_nxgraph('data/syn/powerlaw_500_ID0.txt')
-	init_temperature = 1.5 #Best so far
+	graph = read_nxgraph('data/syn/powerlaw_500_ID1.txt')
 	num_steps = 1000 #Best so far
-	sa_score, sa_solution = simulated_annealing_tensor(init_temperature, num_steps, graph)
+	sa_score, sa_solution = simulated_annealing_tensor(num_steps, graph)
 
 	print('Solution:', sa_solution)
 	print('Gamma:', (1470-sa_score)/1470)
