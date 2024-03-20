@@ -87,6 +87,9 @@ def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph) 
 
 	best_solution = curr_solution
 	best_score = curr_score
+	
+	scores = []
+	best_scores = []
 
 	pbar = tqdm.tqdm(range(num_steps), f'Simulated Annealing, Score: {best_score}')
 	ctr = 0
@@ -111,18 +114,22 @@ def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph) 
 				curr_solution = new_solution
 				curr_score = new_score
 				ctr = 0
+		scores.append(curr_score)
 
 		if new_score>best_score:
 			best_score = new_score
 			best_solution = new_solution
-			pbar.set_description(f'Simulated Annealing, Score: {best_score}')
+			best_scores.append([best_score, k])
+		
+		pbar.set_description(f'Simulated Annealing, Score: {best_score}, {curr_score}')
 
 		pbar.update()
+	pbar.close()
 
 	print("score, init_score of simulated_annealing", best_score, init_score)
 	running_duration = time.time() - start_time
 	print('running_duration: ', running_duration)
-	return best_score, best_solution
+	return best_score, best_solution, np.array(best_scores), np.array(scores)
 
 
 def flip_one_value_vectorized(tensor):
@@ -148,6 +155,9 @@ def simulated_annealing_tensor(num_steps: int, graph: nx.Graph, init_temp:float)
 	best_solution = curr_solution
 	best_score = curr_score
 
+	scores =[]
+	best_scores = []
+
 	pbar = tqdm.tqdm(range(num_steps), f'Simulated Annealing, Score: {best_score}')
 	for k in range(num_steps):
 		new_solutions = flip_one_value_vectorized(curr_solution)
@@ -155,52 +165,92 @@ def simulated_annealing_tensor(num_steps: int, graph: nx.Graph, init_temp:float)
 		new_scores = obj_maxcut_batch(new_solutions, adj_matrix)
 		best_sol_idx = torch.argmax(new_scores)
 
-		temperature = init_temp * (1 - (k + 1) / num_steps)
+		temperature = init_temp * (1 - (k) / num_steps)
+		#temperature = init_temp / (1 + .99 * np.log(1+k+1))
+		#temperature =  init_temp
+
+		# delta_e = curr_score - new_scores[best_sol_idx]
+		# if delta_e < 0:
+		# 	curr_solution = new_solutions[best_sol_idx]
+		# 	curr_score = new_scores[best_sol_idx]
+		# else:
+		# 	#normalize score tensor and generate sample
+		# 	#probability_distribution = torch.nn.functional.softmax(new_scores, dim=-1)
+		# 	#probability_distribution = torch.nn.functional.softmax(new_scores*(k/num_steps)*(1/temperature), dim=-1)
+		# 	#probability_distribution = torch.nn.functional.softmax(new_scores*(1/temperature), dim=-1)
+		# 	delta_e = -new_scores + curr_score
+		# 	probs = delta_e/curr_score + torch.exp(-delta_e / (temperature + 1e-6))
+		# 	probability_distribution = (probs)/probs.sum()
+		# 	sampled_index = torch.multinomial(probability_distribution, 1).item()
+
+		# 	curr_solution = new_solutions[sampled_index]
+		# 	curr_score = new_scores[sampled_index]
 
 		delta_e = curr_score - new_scores[best_sol_idx]
+		temp = curr_score
 		if delta_e < 0:
-			curr_solution = new_solutions[best_sol_idx]
-			curr_score = new_scores[best_sol_idx]
-		else:
-			#normalize score tensor and generate sample
-			probability_distribution = torch.nn.functional.softmax(new_scores, dim=-1)
-			#probability_distribution = torch.nn.functional.softmax(new_scores*(1-k/num_steps)*temperature, dim=-1)
-			sampled_index = torch.multinomial(probability_distribution, 1).item()
+			temp = new_scores[best_sol_idx]
 
-			curr_solution = new_solutions[sampled_index]
-			curr_score = new_scores[sampled_index]
+		delta_e = -new_scores + temp
+		#probs = delta_e/curr_score + torch.exp(-delta_e / (temperature+1e-6))
+		probs = torch.exp(-delta_e / (temperature+1e-6))
+		probability_distribution = (probs+1e-6)/probs.sum()
+		sampled_index = torch.multinomial(probability_distribution, 1).item()
+
+		curr_solution = new_solutions[sampled_index]
+		curr_score = new_scores[sampled_index]
+
+		scores.append(curr_score.to('cpu').item())
 
 		if new_scores[best_sol_idx]>best_score:
 			best_score = new_scores[best_sol_idx]
 			best_solution = new_solutions[best_sol_idx]
-			pbar.set_description(f'Simulated Annealing, Score: {best_score}')
+			best_scores.append([best_score.to('cpu').item(), k])
+
+		pbar.set_description(f'Simulated Annealing, Score: {best_score}, {curr_score}, {temperature:.3f}')
 
 		pbar.update()
+	pbar.close()
 
-	print("score, init_score of simulated_annealing", best_score, init_score)
+	print("score, init_score of simulated_annealing", best_score.to('cpu').numpy(), init_score.to('cpu').numpy())
 	running_duration = time.time() - start_time
 	print('running_duration: ', running_duration)
-	return best_score, best_solution
+	return best_score, best_solution, np.array(best_scores), np.array(scores)
 
 if __name__ == '__main__':
 
-	# # read data
+	# read data
 	# graph = read_nxgraph('data/syn/powerlaw_500_ID1.txt')
 	# init_temperature = 1.5 #Best so far
-	# num_steps = 100000 #Best so far
+	# num_steps = 10000 #Best so far
 	# # init_temperature = 1.5
 	# # num_steps = 10000
-	# sa_score, sa_solution = simulated_annealing(init_temperature, num_steps, graph)
+	# sa_score, sa_solution, best_scores, scores = simulated_annealing(init_temperature, num_steps, graph)
 
 	# print('Solution:', sa_solution)
 	# print('Gamma:', (1470-sa_score)/1470)
 
+	# import matplotlib.pyplot as plt
+
+	# plt.plot(scores, label='Score')
+	# plt.plot(best_scores[:,1],best_scores[:,0], label='Best Score')
+	# plt.legend()
+	# plt.show()
+
 
 	# read data
-	graph = read_nxgraph('data/syn/powerlaw_500_ID1.txt')
-	init_temp = 1.5
-	num_steps = 10000 #Best so far
-	sa_score, sa_solution = simulated_annealing_tensor(num_steps, graph, init_temp)
+	graph = read_nxgraph('data/syn/powerlaw_500_ID0.txt')
+	init_temp = 2.5
+	num_steps = 100000 #Best so far
+	sa_score, sa_solution, best_scores, scores= simulated_annealing_tensor(num_steps, graph, init_temp)
 
-	print('Solution:', sa_solution)
-	print('Gamma:', (1470-sa_score)/1470)
+	print('Solution:', sa_solution.to('cpu').numpy())
+	print('Gamma:', (1470-sa_score.to('cpu').item())/1470)
+	print('Temp:', init_temp)
+
+	import matplotlib.pyplot as plt
+
+	plt.plot(best_scores[:,1],best_scores[:,0], label='Best Score')
+	plt.plot(scores, label='Score')
+	plt.legend()
+	plt.show()
