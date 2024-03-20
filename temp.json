@@ -1,0 +1,1052 @@
+{
+    "data/syn/powerlaw_100_ID8.txt": {
+        "score": 256.0,
+        "num_iterations": 4198,
+        "stop_score": 282.0,
+        "run_time": 60.00069451332092,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID5.txt": {
+        "score": 252.0,
+        "num_iterations": 4198,
+        "stop_score": 287.0,
+        "run_time": 60.01020526885986,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID0.txt": {
+        "score": 252.0,
+        "num_iterations": 4180,
+        "stop_score": 282.0,
+        "run_time": 60.02249217033386,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID4.txt": {
+        "score": 256.0,
+        "num_iterations": 4246,
+        "stop_score": 278.0,
+        "run_time": 60.03546762466431,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID13.txt": {
+        "score": 247.0,
+        "num_iterations": 4172,
+        "stop_score": 282.0,
+        "run_time": 60.03248691558838,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID3.txt": {
+        "score": 248.0,
+        "num_iterations": 4158,
+        "stop_score": 286.0,
+        "run_time": 60.04777383804321,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID10.txt": {
+        "score": 254.0,
+        "num_iterations": 4177,
+        "stop_score": 283.0,
+        "run_time": 60.04533076286316,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID15.txt": {
+        "score": 249.0,
+        "num_iterations": 4099,
+        "stop_score": 280.0,
+        "run_time": 60.03885841369629,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID18.txt": {
+        "score": 248.0,
+        "num_iterations": 4174,
+        "stop_score": 284.0,
+        "run_time": 60.04114580154419,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID6.txt": {
+        "score": 250.0,
+        "num_iterations": 4211,
+        "stop_score": 282.0,
+        "run_time": 60.06670928001404,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID12.txt": {
+        "score": 248.0,
+        "num_iterations": 4169,
+        "stop_score": 283.0,
+        "run_time": 60.059964179992676,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID11.txt": {
+        "score": 247.0,
+        "num_iterations": 4169,
+        "stop_score": 282.0,
+        "run_time": 60.08871936798096,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID22.txt": {
+        "score": 252.0,
+        "num_iterations": 4154,
+        "stop_score": 283.0,
+        "run_time": 60.07416319847107,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID19.txt": {
+        "score": 257.0,
+        "num_iterations": 4168,
+        "stop_score": 284.0,
+        "run_time": 60.08697032928467,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID25.txt": {
+        "score": 246.0,
+        "num_iterations": 4177,
+        "stop_score": 280.0,
+        "run_time": 60.07651734352112,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID27.txt": {
+        "score": 256.0,
+        "num_iterations": 4160,
+        "stop_score": 284.0,
+        "run_time": 60.09260535240173,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID21.txt": {
+        "score": 252.0,
+        "num_iterations": 4172,
+        "stop_score": 286.0,
+        "run_time": 60.11308574676514,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID28.txt": {
+        "score": 252.0,
+        "num_iterations": 4149,
+        "stop_score": 285.0,
+        "run_time": 60.09641170501709,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID0.txt": {
+        "score": 505.0,
+        "num_iterations": 3645,
+        "stop_score": 581.0,
+        "run_time": 60.10160422325134,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID17.txt": {
+        "score": 251.0,
+        "num_iterations": 4147,
+        "stop_score": 281.0,
+        "run_time": 60.132943868637085,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID2.txt": {
+        "score": 497.0,
+        "num_iterations": 3683,
+        "stop_score": 578.0,
+        "run_time": 60.11251902580261,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID1.txt": {
+        "score": 508.0,
+        "num_iterations": 3627,
+        "stop_score": 577.0,
+        "run_time": 60.12600064277649,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID6.txt": {
+        "score": 489.0,
+        "num_iterations": 3619,
+        "stop_score": 579.0,
+        "run_time": 60.11663484573364,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID9.txt": {
+        "score": 494.0,
+        "num_iterations": 3661,
+        "stop_score": 574.0,
+        "run_time": 60.11314558982849,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID8.txt": {
+        "score": 503.0,
+        "num_iterations": 3649,
+        "stop_score": 576.0,
+        "run_time": 60.124037981033325,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID10.txt": {
+        "score": 506.0,
+        "num_iterations": 3655,
+        "stop_score": 581.0,
+        "run_time": 60.12716627120972,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID26.txt": {
+        "score": 248.0,
+        "num_iterations": 4143,
+        "stop_score": 283.0,
+        "run_time": 60.17494535446167,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID14.txt": {
+        "score": 498.0,
+        "num_iterations": 3632,
+        "stop_score": 575.0,
+        "run_time": 60.12618350982666,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID16.txt": {
+        "score": 494.0,
+        "num_iterations": 3686,
+        "stop_score": 578.0,
+        "run_time": 60.12361478805542,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID17.txt": {
+        "score": 500.0,
+        "num_iterations": 3592,
+        "stop_score": 581.0,
+        "run_time": 60.13967752456665,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID1.txt": {
+        "score": 248.0,
+        "num_iterations": 4181,
+        "stop_score": 285.0,
+        "run_time": 60.24492025375366,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID19.txt": {
+        "score": 503.0,
+        "num_iterations": 3623,
+        "stop_score": 580.0,
+        "run_time": 60.13552236557007,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID22.txt": {
+        "score": 509.0,
+        "num_iterations": 3585,
+        "stop_score": 581.0,
+        "run_time": 60.1397008895874,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID21.txt": {
+        "score": 486.0,
+        "num_iterations": 3598,
+        "stop_score": 575.0,
+        "run_time": 60.143434047698975,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID24.txt": {
+        "score": 512.0,
+        "num_iterations": 3667,
+        "stop_score": 578.0,
+        "run_time": 60.13299489021301,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID29.txt": {
+        "score": 250.0,
+        "num_iterations": 4187,
+        "stop_score": 285.0,
+        "run_time": 60.232558250427246,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID25.txt": {
+        "score": 499.0,
+        "num_iterations": 3699,
+        "stop_score": 580.0,
+        "run_time": 60.14563179016113,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID26.txt": {
+        "score": 497.0,
+        "num_iterations": 3638,
+        "stop_score": 580.0,
+        "run_time": 60.14372730255127,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID14.txt": {
+        "score": 252.0,
+        "num_iterations": 4171,
+        "stop_score": 281.0,
+        "run_time": 60.277055501937866,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID29.txt": {
+        "score": 495.0,
+        "num_iterations": 3639,
+        "stop_score": 576.0,
+        "run_time": 60.14497137069702,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID0.txt": {
+        "score": 741.0,
+        "num_iterations": 3554,
+        "stop_score": 874.0,
+        "run_time": 60.13977098464966,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID3.txt": {
+        "score": 507.0,
+        "num_iterations": 3602,
+        "stop_score": 578.0,
+        "run_time": 60.25507974624634,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID9.txt": {
+        "score": 252.0,
+        "num_iterations": 4156,
+        "stop_score": 286.0,
+        "run_time": 60.306185245513916,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID2.txt": {
+        "score": 736.0,
+        "num_iterations": 3541,
+        "stop_score": 876.0,
+        "run_time": 60.140408754348755,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID3.txt": {
+        "score": 747.0,
+        "num_iterations": 3540,
+        "stop_score": 880.0,
+        "run_time": 60.13964819908142,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID13.txt": {
+        "score": 493.0,
+        "num_iterations": 3620,
+        "stop_score": 575.0,
+        "run_time": 60.24366044998169,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID7.txt": {
+        "score": 735.0,
+        "num_iterations": 3586,
+        "stop_score": 883.0,
+        "run_time": 60.121087074279785,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID6.txt": {
+        "score": 744.0,
+        "num_iterations": 3569,
+        "stop_score": 874.0,
+        "run_time": 60.13281750679016,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID5.txt": {
+        "score": 732.0,
+        "num_iterations": 3550,
+        "stop_score": 883.0,
+        "run_time": 60.145747661590576,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID18.txt": {
+        "score": 505.0,
+        "num_iterations": 3581,
+        "stop_score": 581.0,
+        "run_time": 60.25901794433594,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID10.txt": {
+        "score": 741.0,
+        "num_iterations": 3558,
+        "stop_score": 877.0,
+        "run_time": 60.159263610839844,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID11.txt": {
+        "score": 725.0,
+        "num_iterations": 3532,
+        "stop_score": 873.0,
+        "run_time": 60.16461181640625,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID23.txt": {
+        "score": 250.0,
+        "num_iterations": 4186,
+        "stop_score": 280.0,
+        "run_time": 60.3682222366333,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID7.txt": {
+        "score": 258.0,
+        "num_iterations": 4185,
+        "stop_score": 281.0,
+        "run_time": 60.40153789520264,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID23.txt": {
+        "score": 494.0,
+        "num_iterations": 3617,
+        "stop_score": 583.0,
+        "run_time": 60.28554153442383,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID13.txt": {
+        "score": 739.0,
+        "num_iterations": 3511,
+        "stop_score": 872.0,
+        "run_time": 60.161476135253906,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID15.txt": {
+        "score": 750.0,
+        "num_iterations": 3543,
+        "stop_score": 873.0,
+        "run_time": 60.158371448516846,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID16.txt": {
+        "score": 731.0,
+        "num_iterations": 3530,
+        "stop_score": 874.0,
+        "run_time": 60.1602349281311,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID18.txt": {
+        "score": 738.0,
+        "num_iterations": 3545,
+        "stop_score": 883.0,
+        "run_time": 60.158440589904785,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID28.txt": {
+        "score": 494.0,
+        "num_iterations": 3663,
+        "stop_score": 577.0,
+        "run_time": 60.28434681892395,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID20.txt": {
+        "score": 253.0,
+        "num_iterations": 4139,
+        "stop_score": 285.0,
+        "run_time": 60.42066144943237,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID19.txt": {
+        "score": 744.0,
+        "num_iterations": 3519,
+        "stop_score": 880.0,
+        "run_time": 60.163400411605835,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID21.txt": {
+        "score": 741.0,
+        "num_iterations": 3502,
+        "stop_score": 877.0,
+        "run_time": 60.158936500549316,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID12.txt": {
+        "score": 498.0,
+        "num_iterations": 3659,
+        "stop_score": 582.0,
+        "run_time": 60.36571526527405,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID1.txt": {
+        "score": 728.0,
+        "num_iterations": 3524,
+        "stop_score": 870.0,
+        "run_time": 60.28601336479187,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID16.txt": {
+        "score": 253.0,
+        "num_iterations": 4205,
+        "stop_score": 282.0,
+        "run_time": 60.44667673110962,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID23.txt": {
+        "score": 742.0,
+        "num_iterations": 3556,
+        "stop_score": 879.0,
+        "run_time": 60.159592628479004,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID24.txt": {
+        "score": 249.0,
+        "num_iterations": 4147,
+        "stop_score": 282.0,
+        "run_time": 60.43813395500183,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID26.txt": {
+        "score": 751.0,
+        "num_iterations": 3529,
+        "stop_score": 872.0,
+        "run_time": 60.15674066543579,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID27.txt": {
+        "score": 736.0,
+        "num_iterations": 3524,
+        "stop_score": 878.0,
+        "run_time": 60.14618682861328,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID20.txt": {
+        "score": 498.0,
+        "num_iterations": 3641,
+        "stop_score": 582.0,
+        "run_time": 60.37035870552063,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID0.txt": {
+        "score": 997.0,
+        "num_iterations": 3451,
+        "stop_score": 1169.0,
+        "run_time": 60.137593030929565,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID9.txt": {
+        "score": 747.0,
+        "num_iterations": 3483,
+        "stop_score": 874.0,
+        "run_time": 60.277968883514404,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_100_ID2.txt": {
+        "score": 243.0,
+        "num_iterations": 4222,
+        "stop_score": 280.0,
+        "run_time": 60.50108051300049,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID5.txt": {
+        "score": 969.0,
+        "num_iterations": 3442,
+        "stop_score": 1171.0,
+        "run_time": 60.10646080970764,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID27.txt": {
+        "score": 495.0,
+        "num_iterations": 3648,
+        "stop_score": 586.0,
+        "run_time": 60.36281490325928,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID17.txt": {
+        "score": 746.0,
+        "num_iterations": 3526,
+        "stop_score": 872.0,
+        "run_time": 60.25002336502075,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID5.txt": {
+        "score": 497.0,
+        "num_iterations": 3644,
+        "stop_score": 580.0,
+        "run_time": 60.45876860618591,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID20.txt": {
+        "score": 726.0,
+        "num_iterations": 3566,
+        "stop_score": 882.0,
+        "run_time": 60.23895287513733,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID7.txt": {
+        "score": 499.0,
+        "num_iterations": 3661,
+        "stop_score": 579.0,
+        "run_time": 60.45761227607727,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID11.txt": {
+        "score": 495.0,
+        "num_iterations": 3630,
+        "stop_score": 580.0,
+        "run_time": 60.45218467712402,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID22.txt": {
+        "score": 743.0,
+        "num_iterations": 3559,
+        "stop_score": 874.0,
+        "run_time": 60.23196315765381,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID24.txt": {
+        "score": 736.0,
+        "num_iterations": 3504,
+        "stop_score": 876.0,
+        "run_time": 60.23291015625,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID4.txt": {
+        "score": 997.0,
+        "num_iterations": 3431,
+        "stop_score": 1173.0,
+        "run_time": 60.155431509017944,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID25.txt": {
+        "score": 739.0,
+        "num_iterations": 3517,
+        "stop_score": 872.0,
+        "run_time": 60.24542498588562,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID8.txt": {
+        "score": 747.0,
+        "num_iterations": 3517,
+        "stop_score": 881.0,
+        "run_time": 60.346399545669556,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID28.txt": {
+        "score": 743.0,
+        "num_iterations": 3493,
+        "stop_score": 878.0,
+        "run_time": 60.23001003265381,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID29.txt": {
+        "score": 737.0,
+        "num_iterations": 3512,
+        "stop_score": 875.0,
+        "run_time": 60.23034596443176,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID11.txt": {
+        "score": 992.0,
+        "num_iterations": 3422,
+        "stop_score": 1170.0,
+        "run_time": 60.12805223464966,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID1.txt": {
+        "score": 985.0,
+        "num_iterations": 3455,
+        "stop_score": 1175.0,
+        "run_time": 60.22093415260315,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID4.txt": {
+        "score": 490.0,
+        "num_iterations": 3628,
+        "stop_score": 585.0,
+        "run_time": 60.52686309814453,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID14.txt": {
+        "score": 778.0,
+        "num_iterations": 3575,
+        "stop_score": 875.0,
+        "run_time": 60.33373403549194,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID7.txt": {
+        "score": 993.0,
+        "num_iterations": 3448,
+        "stop_score": 1174.0,
+        "run_time": 60.192824363708496,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID16.txt": {
+        "score": 983.0,
+        "num_iterations": 3428,
+        "stop_score": 1177.0,
+        "run_time": 60.098381996154785,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID8.txt": {
+        "score": 975.0,
+        "num_iterations": 3467,
+        "stop_score": 1178.0,
+        "run_time": 60.18103051185608,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID9.txt": {
+        "score": 974.0,
+        "num_iterations": 3430,
+        "stop_score": 1170.0,
+        "run_time": 60.17479705810547,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID19.txt": {
+        "score": 984.0,
+        "num_iterations": 3466,
+        "stop_score": 1174.0,
+        "run_time": 60.08777117729187,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID18.txt": {
+        "score": 993.0,
+        "num_iterations": 3421,
+        "stop_score": 1172.0,
+        "run_time": 60.08477282524109,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID4.txt": {
+        "score": 748.0,
+        "num_iterations": 3513,
+        "stop_score": 877.0,
+        "run_time": 60.426598072052,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID12.txt": {
+        "score": 982.0,
+        "num_iterations": 3444,
+        "stop_score": 1177.0,
+        "run_time": 60.15948009490967,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID2.txt": {
+        "score": 974.0,
+        "num_iterations": 3464,
+        "stop_score": 1172.0,
+        "run_time": 60.246135234832764,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID15.txt": {
+        "score": 1001.0,
+        "num_iterations": 3433,
+        "stop_score": 1168.0,
+        "run_time": 60.14686417579651,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID13.txt": {
+        "score": 987.0,
+        "num_iterations": 3416,
+        "stop_score": 1176.0,
+        "run_time": 60.14550018310547,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID3.txt": {
+        "score": 964.0,
+        "num_iterations": 3450,
+        "stop_score": 1173.0,
+        "run_time": 60.22144818305969,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID26.txt": {
+        "score": 985.0,
+        "num_iterations": 3481,
+        "stop_score": 1180.0,
+        "run_time": 60.051424980163574,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID20.txt": {
+        "score": 1005.0,
+        "num_iterations": 3426,
+        "stop_score": 1182.0,
+        "run_time": 60.114006996154785,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID10.txt": {
+        "score": 986.0,
+        "num_iterations": 3430,
+        "stop_score": 1181.0,
+        "run_time": 60.20130515098572,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_200_ID15.txt": {
+        "score": 497.0,
+        "num_iterations": 3630,
+        "stop_score": 575.0,
+        "run_time": 60.541200160980225,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID23.txt": {
+        "score": 990.0,
+        "num_iterations": 3436,
+        "stop_score": 1174.0,
+        "run_time": 60.08429408073425,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID27.txt": {
+        "score": 985.0,
+        "num_iterations": 3460,
+        "stop_score": 1171.0,
+        "run_time": 60.042237997055054,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID14.txt": {
+        "score": 974.0,
+        "num_iterations": 3454,
+        "stop_score": 1171.0,
+        "run_time": 60.1750168800354,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID28.txt": {
+        "score": 975.0,
+        "num_iterations": 3434,
+        "stop_score": 1174.0,
+        "run_time": 60.03954076766968,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID24.txt": {
+        "score": 994.0,
+        "num_iterations": 3403,
+        "stop_score": 1174.0,
+        "run_time": 60.087209939956665,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID22.txt": {
+        "score": 967.0,
+        "num_iterations": 3436,
+        "stop_score": 1176.0,
+        "run_time": 60.11114287376404,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID25.txt": {
+        "score": 989.0,
+        "num_iterations": 3460,
+        "stop_score": 1168.0,
+        "run_time": 60.07572889328003,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID6.txt": {
+        "score": 988.0,
+        "num_iterations": 3452,
+        "stop_score": 1170.0,
+        "run_time": 60.25285816192627,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID21.txt": {
+        "score": 988.0,
+        "num_iterations": 3447,
+        "stop_score": 1170.0,
+        "run_time": 60.14270067214966,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID29.txt": {
+        "score": 1003.0,
+        "num_iterations": 3440,
+        "stop_score": 1172.0,
+        "run_time": 60.04709529876709,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_300_ID12.txt": {
+        "score": 736.0,
+        "num_iterations": 3544,
+        "stop_score": 891.0,
+        "run_time": 60.44182276725769,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_400_ID17.txt": {
+        "score": 978.0,
+        "num_iterations": 3435,
+        "stop_score": 1173.0,
+        "run_time": 60.17696452140808,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID1.txt": {
+        "score": 1215.0,
+        "num_iterations": 3289,
+        "stop_score": 1471.0,
+        "run_time": 60.071964263916016,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID0.txt": {
+        "score": 1189.0,
+        "num_iterations": 3296,
+        "stop_score": 1470.0,
+        "run_time": 60.07957220077515,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID2.txt": {
+        "score": 1214.0,
+        "num_iterations": 3291,
+        "stop_score": 1467.0,
+        "run_time": 60.03871178627014,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID3.txt": {
+        "score": 1223.0,
+        "num_iterations": 3285,
+        "stop_score": 1458.0,
+        "run_time": 60.02355337142944,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID4.txt": {
+        "score": 1261.0,
+        "num_iterations": 3283,
+        "stop_score": 1479.0,
+        "run_time": 60.01254630088806,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID6.txt": {
+        "score": 1243.0,
+        "num_iterations": 3273,
+        "stop_score": 1469.0,
+        "run_time": 60.028029918670654,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID5.txt": {
+        "score": 1218.0,
+        "num_iterations": 3278,
+        "stop_score": 1471.0,
+        "run_time": 60.02902269363403,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID7.txt": {
+        "score": 1242.0,
+        "num_iterations": 3290,
+        "stop_score": 1475.0,
+        "run_time": 60.02994656562805,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID8.txt": {
+        "score": 1232.0,
+        "num_iterations": 3296,
+        "stop_score": 1474.0,
+        "run_time": 60.02099680900574,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID11.txt": {
+        "score": 1217.0,
+        "num_iterations": 3289,
+        "stop_score": 1467.0,
+        "run_time": 60.014018535614014,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID9.txt": {
+        "score": 1201.0,
+        "num_iterations": 3307,
+        "stop_score": 1458.0,
+        "run_time": 60.0359833240509,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID10.txt": {
+        "score": 1218.0,
+        "num_iterations": 3282,
+        "stop_score": 1473.0,
+        "run_time": 60.01729393005371,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID12.txt": {
+        "score": 1211.0,
+        "num_iterations": 3313,
+        "stop_score": 1474.0,
+        "run_time": 60.03316593170166,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID13.txt": {
+        "score": 1201.0,
+        "num_iterations": 3289,
+        "stop_score": 1466.0,
+        "run_time": 60.010174036026,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID14.txt": {
+        "score": 1215.0,
+        "num_iterations": 3308,
+        "stop_score": 1468.0,
+        "run_time": 60.01081347465515,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID15.txt": {
+        "score": 1213.0,
+        "num_iterations": 3306,
+        "stop_score": 1469.0,
+        "run_time": 60.03036069869995,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID16.txt": {
+        "score": 1243.0,
+        "num_iterations": 3337,
+        "stop_score": 1473.0,
+        "run_time": 60.01915383338928,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID17.txt": {
+        "score": 1225.0,
+        "num_iterations": 3328,
+        "stop_score": 1466.0,
+        "run_time": 60.01364493370056,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID18.txt": {
+        "score": 1226.0,
+        "num_iterations": 3305,
+        "stop_score": 1475.0,
+        "run_time": 60.03027629852295,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID20.txt": {
+        "score": 1247.0,
+        "num_iterations": 3378,
+        "stop_score": 1481.0,
+        "run_time": 60.026283740997314,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID19.txt": {
+        "score": 1237.0,
+        "num_iterations": 3324,
+        "stop_score": 1467.0,
+        "run_time": 60.030590534210205,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID21.txt": {
+        "score": 1244.0,
+        "num_iterations": 3338,
+        "stop_score": 1464.0,
+        "run_time": 60.02463459968567,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID22.txt": {
+        "score": 1225.0,
+        "num_iterations": 3342,
+        "stop_score": 1474.0,
+        "run_time": 60.031848669052124,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID23.txt": {
+        "score": 1213.0,
+        "num_iterations": 3359,
+        "stop_score": 1469.0,
+        "run_time": 60.02605986595154,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID24.txt": {
+        "score": 1214.0,
+        "num_iterations": 3369,
+        "stop_score": 1470.0,
+        "run_time": 60.02620601654053,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID26.txt": {
+        "score": 1216.0,
+        "num_iterations": 3369,
+        "stop_score": 1467.0,
+        "run_time": 60.01202964782715,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID25.txt": {
+        "score": 1213.0,
+        "num_iterations": 3342,
+        "stop_score": 1469.0,
+        "run_time": 60.03112030029297,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID27.txt": {
+        "score": 1226.0,
+        "num_iterations": 3390,
+        "stop_score": 1464.0,
+        "run_time": 60.0459680557251,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID28.txt": {
+        "score": 1235.0,
+        "num_iterations": 3363,
+        "stop_score": 1463.0,
+        "run_time": 60.031055212020874,
+        "stop_time": 60
+    },
+    "data/syn/powerlaw_500_ID29.txt": {
+        "score": 1240.0,
+        "num_iterations": 3405,
+        "stop_score": 1468.0,
+        "run_time": 60.02479887008667,
+        "stop_time": 60
+    }
+}

@@ -1,4 +1,5 @@
 import sys, math, tqdm, torch
+import matplotlib.pyplot as plt
 
 import copy
 import time
@@ -71,8 +72,7 @@ def get_init_guess(graph: nx.Graph):
 
 	return init_guess
 
-def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph) -> (int, Union[List[int], np.array], List[int]):
-	print('simulated_annealing')
+def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph, stop_score=None, stop_time=None, do_pbar=True) -> (int, Union[List[int], np.array], List[int]):
 	
 	adj_matrix = nx.to_numpy_array(graph)
 	num_nodes = graph.number_of_nodes()
@@ -91,8 +91,10 @@ def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph) 
 	scores = []
 	best_scores = []
 
-	pbar = tqdm.tqdm(range(num_steps), f'Simulated Annealing, Score: {best_score}')
+	if do_pbar:
+		pbar = tqdm.tqdm(range(num_steps), f'Simulated Annealing, Score: {best_score}')
 	ctr = 0
+	num_iter = 0
 	for k in range(num_steps):
 		# The temperature decreases
 		temperature = init_temperature * (1 - (k + 1) / num_steps)
@@ -121,15 +123,22 @@ def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph) 
 			best_solution = new_solution
 			best_scores.append([best_score, k])
 		
-		pbar.set_description(f'Simulated Annealing, Score: {best_score}, {curr_score}')
+		if do_pbar:
+			pbar.set_description(f'Simulated Annealing, Score: {best_score}, {curr_score}')
+			pbar.update()
+		num_iter+=1
 
-		pbar.update()
-	pbar.close()
+		#check for stop
+		if (stop_time!=None and time.time()-start_time > stop_time) or (stop_score!=None and best_score>stop_score):
+			break
 
-	print("score, init_score of simulated_annealing", best_score, init_score)
+	if do_pbar:
+		pbar.close()
+
+	#print("score, init_score of simulated_annealing", best_score, init_score)
 	running_duration = time.time() - start_time
 	print('running_duration: ', running_duration)
-	return best_score, best_solution, np.array(best_scores), np.array(scores)
+	return best_score, best_solution, best_scores, scores, num_iter
 
 
 def flip_one_value_vectorized(tensor):
@@ -138,8 +147,7 @@ def flip_one_value_vectorized(tensor):
 	flipped_matrices = (identity + tensor.repeat(n, 1)) % 2
 	return flipped_matrices
 
-def simulated_annealing_tensor(num_steps: int, graph: nx.Graph, init_temp:float) -> (int, Union[List[int], np.array], List[int]):
-	print('simulated_annealing')
+def simulated_annealing_tensor(init_temp:float, num_steps: int, graph: nx.Graph, stop_score=None, stop_time=None, do_pbar=True) -> (int, Union[List[int], np.array], List[int]):
 	
 	adj_matrix = torch.tensor(nx.to_numpy_array(graph)).to(device)
 	num_nodes = graph.number_of_nodes()
@@ -158,7 +166,9 @@ def simulated_annealing_tensor(num_steps: int, graph: nx.Graph, init_temp:float)
 	scores =[]
 	best_scores = []
 
-	pbar = tqdm.tqdm(range(num_steps), f'Simulated Annealing, Score: {best_score}')
+	num_iter = 0
+	if do_pbar:
+		pbar = tqdm.tqdm(range(num_steps), f'Simulated Annealing, Score: {best_score}')
 	for k in range(num_steps):
 		new_solutions = flip_one_value_vectorized(curr_solution)
 
@@ -192,9 +202,10 @@ def simulated_annealing_tensor(num_steps: int, graph: nx.Graph, init_temp:float)
 			temp = new_scores[best_sol_idx]
 
 		delta_e = -new_scores + temp
-		#probs = delta_e/curr_score + torch.exp(-delta_e / (temperature+1e-6))
+		probs = delta_e/curr_score + torch.exp(-delta_e / (temperature+1e-6))
 		probs = torch.exp(-delta_e / (temperature+1e-6))
-		probability_distribution = (probs+1e-6)/probs.sum()
+		probs+=1e-6
+		probability_distribution = (probs)/probs.sum()
 		sampled_index = torch.multinomial(probability_distribution, 1).item()
 
 		curr_solution = new_solutions[sampled_index]
@@ -207,15 +218,21 @@ def simulated_annealing_tensor(num_steps: int, graph: nx.Graph, init_temp:float)
 			best_solution = new_solutions[best_sol_idx]
 			best_scores.append([best_score.to('cpu').item(), k])
 
-		pbar.set_description(f'Simulated Annealing, Score: {best_score}, {curr_score}, {temperature:.3f}')
+		if do_pbar:
+			pbar.set_description(f'Simulated Annealing, Score: {best_score}, {curr_score}, {temperature:.3f}')
+			pbar.update()
+		num_iter+=1
 
-		pbar.update()
-	pbar.close()
+		#check for stop
+		if (stop_time!=None and time.time()-start_time > stop_time) or (stop_score!=None and best_score.to('cpu').item()>stop_score):
+			break
+	if do_pbar:
+		pbar.close()
 
-	print("score, init_score of simulated_annealing", best_score.to('cpu').numpy(), init_score.to('cpu').numpy())
+	#print("score, init_score of simulated_annealing", best_score.to('cpu').numpy(), init_score.to('cpu').numpy())
 	running_duration = time.time() - start_time
 	print('running_duration: ', running_duration)
-	return best_score, best_solution, np.array(best_scores), np.array(scores)
+	return best_score, best_solution, best_scores, scores, num_iter
 
 if __name__ == '__main__':
 
@@ -242,13 +259,11 @@ if __name__ == '__main__':
 	graph = read_nxgraph('data/syn/powerlaw_500_ID0.txt')
 	init_temp = 2.5
 	num_steps = 100000 #Best so far
-	sa_score, sa_solution, best_scores, scores= simulated_annealing_tensor(num_steps, graph, init_temp)
+	sa_score, sa_solution, best_scores, scores= simulated_annealing_tensor(init_temp, num_steps, graph)
 
 	print('Solution:', sa_solution.to('cpu').numpy())
 	print('Gamma:', (1470-sa_score.to('cpu').item())/1470)
 	print('Temp:', init_temp)
-
-	import matplotlib.pyplot as plt
 
 	plt.plot(best_scores[:,1],best_scores[:,0], label='Best Score')
 	plt.plot(scores, label='Score')
