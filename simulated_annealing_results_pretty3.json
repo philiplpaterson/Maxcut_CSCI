@@ -1,0 +1,1502 @@
+{
+    "data/syn/powerlaw_100_ID19.txt": {
+        "score": 284.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 284.0,
+        "run_time": 2964.366623401642,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID18.txt": {
+        "score": 284.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 284.0,
+        "run_time": 2964.415391921997,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID9.txt": {
+        "score": 286.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 286.0,
+        "run_time": 2965.984560728073,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID1.txt": {
+        "score": 285.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 285.0,
+        "run_time": 2967.947403907776,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID2.txt": {
+        "score": 280.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 280.0,
+        "run_time": 2968.4055531024933,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID24.txt": {
+        "score": 282.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 282.0,
+        "run_time": 2968.697698354721,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID11.txt": {
+        "score": 280.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 282.0,
+        "run_time": 2969.2081520557404,
+        "gamma": 0.0070921985815602835,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID10.txt": {
+        "score": 283.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 283.0,
+        "run_time": 2969.6892790794373,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID27.txt": {
+        "score": 284.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 284.0,
+        "run_time": 2969.655962228775,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID29.txt": {
+        "score": 285.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 285.0,
+        "run_time": 2970.350076675415,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID15.txt": {
+        "score": 279.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 280.0,
+        "run_time": 2970.8535141944885,
+        "gamma": 0.0035714285714285713,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID26.txt": {
+        "score": 282.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 283.0,
+        "run_time": 2972.397234916687,
+        "gamma": 0.0035335689045936395,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID28.txt": {
+        "score": 285.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 285.0,
+        "run_time": 2973.431075811386,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID13.txt": {
+        "score": 282.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 282.0,
+        "run_time": 2973.6333577632904,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID6.txt": {
+        "score": 280.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 282.0,
+        "run_time": 2974.111751317978,
+        "gamma": 0.0070921985815602835,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID12.txt": {
+        "score": 283.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 283.0,
+        "run_time": 2974.3733627796173,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID8.txt": {
+        "score": 282.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 282.0,
+        "run_time": 2974.683655977249,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID0.txt": {
+        "score": 282.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 282.0,
+        "run_time": 2975.2924671173096,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID5.txt": {
+        "score": 287.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 287.0,
+        "run_time": 2975.446002960205,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID7.txt": {
+        "score": 281.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 281.0,
+        "run_time": 2975.604573726654,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID20.txt": {
+        "score": 285.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 285.0,
+        "run_time": 2976.0700418949127,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID17.txt": {
+        "score": 281.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 281.0,
+        "run_time": 2976.11074924469,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID4.txt": {
+        "score": 278.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 278.0,
+        "run_time": 2976.5054955482483,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID16.txt": {
+        "score": 282.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 282.0,
+        "run_time": 2976.559154510498,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID21.txt": {
+        "score": 286.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 286.0,
+        "run_time": 2976.558615207672,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID23.txt": {
+        "score": 280.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 280.0,
+        "run_time": 2977.0825538635254,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID22.txt": {
+        "score": 283.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 283.0,
+        "run_time": 2977.468218564987,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID14.txt": {
+        "score": 280.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 281.0,
+        "run_time": 2979.5744173526764,
+        "gamma": 0.0035587188612099642,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID25.txt": {
+        "score": 279.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 280.0,
+        "run_time": 2980.757467508316,
+        "gamma": 0.0035714285714285713,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_100_ID3.txt": {
+        "score": 286.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 286.0,
+        "run_time": 2983.3989357948303,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID14.txt": {
+        "score": 574.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 575.0,
+        "run_time": 3421.3522872924805,
+        "gamma": 0.0017391304347826088,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID11.txt": {
+        "score": 576.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 580.0,
+        "run_time": 3426.0568537712097,
+        "gamma": 0.006896551724137931,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID21.txt": {
+        "score": 574.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 575.0,
+        "run_time": 3426.8825266361237,
+        "gamma": 0.0017391304347826088,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID29.txt": {
+        "score": 576.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 576.0,
+        "run_time": 3427.1833424568176,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID4.txt": {
+        "score": 585.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 585.0,
+        "run_time": 3428.0773169994354,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID20.txt": {
+        "score": 581.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 582.0,
+        "run_time": 3428.094791173935,
+        "gamma": 0.001718213058419244,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID1.txt": {
+        "score": 577.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 577.0,
+        "run_time": 3429.1330432891846,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID7.txt": {
+        "score": 576.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 579.0,
+        "run_time": 3429.1314153671265,
+        "gamma": 0.0051813471502590676,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID18.txt": {
+        "score": 581.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 581.0,
+        "run_time": 3429.167523622513,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID3.txt": {
+        "score": 575.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 578.0,
+        "run_time": 3429.5035009384155,
+        "gamma": 0.005190311418685121,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID17.txt": {
+        "score": 576.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 581.0,
+        "run_time": 3430.940915107727,
+        "gamma": 0.008605851979345954,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID27.txt": {
+        "score": 586.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 586.0,
+        "run_time": 3431.5334627628326,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID8.txt": {
+        "score": 575.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 576.0,
+        "run_time": 3431.9020295143127,
+        "gamma": 0.001736111111111111,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID24.txt": {
+        "score": 574.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 578.0,
+        "run_time": 3432.162257194519,
+        "gamma": 0.006920415224913495,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID9.txt": {
+        "score": 574.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 574.0,
+        "run_time": 3432.280919790268,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID19.txt": {
+        "score": 578.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 580.0,
+        "run_time": 3433.6067128181458,
+        "gamma": 0.0034482758620689655,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID13.txt": {
+        "score": 572.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 575.0,
+        "run_time": 3434.0491771698,
+        "gamma": 0.0052173913043478265,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID26.txt": {
+        "score": 579.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 580.0,
+        "run_time": 3434.169252872467,
+        "gamma": 0.0017241379310344827,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID2.txt": {
+        "score": 578.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 578.0,
+        "run_time": 3434.369434595108,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID12.txt": {
+        "score": 579.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 582.0,
+        "run_time": 3434.9027824401855,
+        "gamma": 0.005154639175257732,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID15.txt": {
+        "score": 574.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 575.0,
+        "run_time": 3435.258331298828,
+        "gamma": 0.0017391304347826088,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID5.txt": {
+        "score": 580.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 580.0,
+        "run_time": 3435.9773585796356,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID10.txt": {
+        "score": 577.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 581.0,
+        "run_time": 3436.273798942566,
+        "gamma": 0.0068846815834767644,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID28.txt": {
+        "score": 574.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 577.0,
+        "run_time": 3436.7595896720886,
+        "gamma": 0.005199306759098787,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID0.txt": {
+        "score": 576.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 581.0,
+        "run_time": 3437.0324952602386,
+        "gamma": 0.008605851979345954,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID6.txt": {
+        "score": 577.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 579.0,
+        "run_time": 3437.6442980766296,
+        "gamma": 0.0034542314335060447,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID25.txt": {
+        "score": 580.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 580.0,
+        "run_time": 3437.651916742325,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID23.txt": {
+        "score": 583.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 583.0,
+        "run_time": 3438.8257353305817,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID22.txt": {
+        "score": 580.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 581.0,
+        "run_time": 3438.8833265304565,
+        "gamma": 0.0017211703958691911,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_200_ID16.txt": {
+        "score": 577.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 578.0,
+        "run_time": 3439.89718914032,
+        "gamma": 0.0017301038062283738,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID19.txt": {
+        "score": 867.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 880.0,
+        "run_time": 3513.3130011558533,
+        "gamma": 0.014772727272727272,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID9.txt": {
+        "score": 865.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 874.0,
+        "run_time": 3515.3174500465393,
+        "gamma": 0.010297482837528604,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID21.txt": {
+        "score": 869.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 877.0,
+        "run_time": 3515.4638588428497,
+        "gamma": 0.009122006841505131,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID5.txt": {
+        "score": 881.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 883.0,
+        "run_time": 3517.397395849228,
+        "gamma": 0.0022650056625141564,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID3.txt": {
+        "score": 878.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 880.0,
+        "run_time": 3517.5862443447113,
+        "gamma": 0.0022727272727272726,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID0.txt": {
+        "score": 867.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 874.0,
+        "run_time": 3517.774402618408,
+        "gamma": 0.008009153318077803,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID10.txt": {
+        "score": 872.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 877.0,
+        "run_time": 3518.421499967575,
+        "gamma": 0.005701254275940707,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID15.txt": {
+        "score": 871.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 873.0,
+        "run_time": 3518.66477894783,
+        "gamma": 0.002290950744558992,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID29.txt": {
+        "score": 872.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 875.0,
+        "run_time": 3519.974640607834,
+        "gamma": 0.0034285714285714284,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID23.txt": {
+        "score": 876.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 879.0,
+        "run_time": 3520.855207681656,
+        "gamma": 0.0034129692832764505,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID7.txt": {
+        "score": 883.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 883.0,
+        "run_time": 3520.9705390930176,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID6.txt": {
+        "score": 868.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 874.0,
+        "run_time": 3521.705915212631,
+        "gamma": 0.006864988558352402,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID26.txt": {
+        "score": 869.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 872.0,
+        "run_time": 3521.694217443466,
+        "gamma": 0.0034403669724770644,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID20.txt": {
+        "score": 882.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 882.0,
+        "run_time": 3522.255173444748,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID22.txt": {
+        "score": 874.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 874.0,
+        "run_time": 3522.3375334739685,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID17.txt": {
+        "score": 867.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 872.0,
+        "run_time": 3522.4093449115753,
+        "gamma": 0.005733944954128441,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID16.txt": {
+        "score": 872.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 874.0,
+        "run_time": 3522.457515478134,
+        "gamma": 0.002288329519450801,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID24.txt": {
+        "score": 870.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 876.0,
+        "run_time": 3522.449622631073,
+        "gamma": 0.00684931506849315,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID27.txt": {
+        "score": 874.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 878.0,
+        "run_time": 3523.025591135025,
+        "gamma": 0.004555808656036446,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID25.txt": {
+        "score": 869.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 872.0,
+        "run_time": 3523.3492438793182,
+        "gamma": 0.0034403669724770644,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID8.txt": {
+        "score": 881.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 881.0,
+        "run_time": 3524.25280046463,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID11.txt": {
+        "score": 870.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 873.0,
+        "run_time": 3524.7790145874023,
+        "gamma": 0.003436426116838488,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID4.txt": {
+        "score": 875.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 877.0,
+        "run_time": 3524.8746700286865,
+        "gamma": 0.002280501710376283,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID14.txt": {
+        "score": 872.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 875.0,
+        "run_time": 3524.8710992336273,
+        "gamma": 0.0034285714285714284,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID2.txt": {
+        "score": 868.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 876.0,
+        "run_time": 3525.0714387893677,
+        "gamma": 0.0091324200913242,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID28.txt": {
+        "score": 876.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 878.0,
+        "run_time": 3525.440316438675,
+        "gamma": 0.002277904328018223,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID12.txt": {
+        "score": 890.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 891.0,
+        "run_time": 3526.7299625873566,
+        "gamma": 0.001122334455667789,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID18.txt": {
+        "score": 882.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 883.0,
+        "run_time": 3528.2408039569855,
+        "gamma": 0.0011325028312570782,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID13.txt": {
+        "score": 870.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 872.0,
+        "run_time": 3528.3592722415924,
+        "gamma": 0.0022935779816513763,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_300_ID1.txt": {
+        "score": 869.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 870.0,
+        "run_time": 3529.733006000519,
+        "gamma": 0.0011494252873563218,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID26.txt": {
+        "score": 1179.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1180.0,
+        "run_time": 3606.4123923778534,
+        "gamma": 0.000847457627118644,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID19.txt": {
+        "score": 1172.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1174.0,
+        "run_time": 3610.3003215789795,
+        "gamma": 0.0017035775127768314,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID9.txt": {
+        "score": 1164.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1170.0,
+        "run_time": 3610.6985087394714,
+        "gamma": 0.005128205128205128,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID1.txt": {
+        "score": 1171.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1175.0,
+        "run_time": 3612.132978439331,
+        "gamma": 0.003404255319148936,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID10.txt": {
+        "score": 1177.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1181.0,
+        "run_time": 3612.8528032302856,
+        "gamma": 0.003386960203217612,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID18.txt": {
+        "score": 1163.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1172.0,
+        "run_time": 3613.3021552562714,
+        "gamma": 0.007679180887372013,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID27.txt": {
+        "score": 1169.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1171.0,
+        "run_time": 3613.308578491211,
+        "gamma": 0.0017079419299743809,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID16.txt": {
+        "score": 1176.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1177.0,
+        "run_time": 3614.4370505809784,
+        "gamma": 0.0008496176720475786,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID14.txt": {
+        "score": 1156.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1171.0,
+        "run_time": 3614.655570745468,
+        "gamma": 0.012809564474807857,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID29.txt": {
+        "score": 1168.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1172.0,
+        "run_time": 3614.8704118728638,
+        "gamma": 0.0034129692832764505,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID3.txt": {
+        "score": 1166.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1173.0,
+        "run_time": 3615.2941637039185,
+        "gamma": 0.005967604433077579,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID24.txt": {
+        "score": 1171.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1174.0,
+        "run_time": 3615.197443008423,
+        "gamma": 0.002555366269165247,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID28.txt": {
+        "score": 1166.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1174.0,
+        "run_time": 3615.3964624404907,
+        "gamma": 0.0068143100511073255,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID25.txt": {
+        "score": 1164.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1168.0,
+        "run_time": 3615.610429048538,
+        "gamma": 0.003424657534246575,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID8.txt": {
+        "score": 1171.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1178.0,
+        "run_time": 3615.847760438919,
+        "gamma": 0.005942275042444821,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID2.txt": {
+        "score": 1164.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1172.0,
+        "run_time": 3615.970363378525,
+        "gamma": 0.006825938566552901,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID13.txt": {
+        "score": 1166.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1176.0,
+        "run_time": 3616.660127401352,
+        "gamma": 0.008503401360544218,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID4.txt": {
+        "score": 1169.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1173.0,
+        "run_time": 3617.135630607605,
+        "gamma": 0.0034100596760443308,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID0.txt": {
+        "score": 1168.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1169.0,
+        "run_time": 3617.4043979644775,
+        "gamma": 0.000855431993156544,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID11.txt": {
+        "score": 1169.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1170.0,
+        "run_time": 3617.407548189163,
+        "gamma": 0.0008547008547008547,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID7.txt": {
+        "score": 1174.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1174.0,
+        "run_time": 3617.5766332149506,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID17.txt": {
+        "score": 1169.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1173.0,
+        "run_time": 3617.8374156951904,
+        "gamma": 0.0034100596760443308,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID6.txt": {
+        "score": 1154.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1170.0,
+        "run_time": 3618.139631986618,
+        "gamma": 0.013675213675213675,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID22.txt": {
+        "score": 1174.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1176.0,
+        "run_time": 3618.801778793335,
+        "gamma": 0.0017006802721088435,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID12.txt": {
+        "score": 1164.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1177.0,
+        "run_time": 3619.0117149353027,
+        "gamma": 0.011045029736618521,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID5.txt": {
+        "score": 1169.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1171.0,
+        "run_time": 3619.3474481105804,
+        "gamma": 0.0017079419299743809,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID23.txt": {
+        "score": 1170.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1174.0,
+        "run_time": 3619.404771566391,
+        "gamma": 0.0034071550255536627,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID21.txt": {
+        "score": 1170.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1170.0,
+        "run_time": 3619.8630208969116,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID20.txt": {
+        "score": 1182.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1182.0,
+        "run_time": 3620.0970067977905,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_400_ID15.txt": {
+        "score": 1162.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1168.0,
+        "run_time": 3620.4335930347443,
+        "gamma": 0.005136986301369863,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID13.txt": {
+        "score": 1458.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1466.0,
+        "run_time": 3671.6248276233673,
+        "gamma": 0.005457025920873124,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID20.txt": {
+        "score": 1477.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1481.0,
+        "run_time": 3673.2642126083374,
+        "gamma": 0.0027008777852802163,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID1.txt": {
+        "score": 1463.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1471.0,
+        "run_time": 3673.4816613197327,
+        "gamma": 0.005438477226376614,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID11.txt": {
+        "score": 1469.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1467.0,
+        "run_time": 3673.9154398441315,
+        "gamma": -0.0013633265167007499,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID21.txt": {
+        "score": 1450.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1464.0,
+        "run_time": 3673.8661727905273,
+        "gamma": 0.009562841530054645,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID12.txt": {
+        "score": 1470.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1474.0,
+        "run_time": 3674.0494759082794,
+        "gamma": 0.0027137042062415195,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID27.txt": {
+        "score": 1459.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1464.0,
+        "run_time": 3673.9772913455963,
+        "gamma": 0.0034153005464480873,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID15.txt": {
+        "score": 1467.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1469.0,
+        "run_time": 3674.5636105537415,
+        "gamma": 0.0013614703880190605,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID7.txt": {
+        "score": 1452.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1475.0,
+        "run_time": 3674.816052675247,
+        "gamma": 0.015593220338983051,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID28.txt": {
+        "score": 1462.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1463.0,
+        "run_time": 3674.730167865753,
+        "gamma": 0.000683526999316473,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID16.txt": {
+        "score": 1473.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1473.0,
+        "run_time": 3675.3638877868652,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID10.txt": {
+        "score": 1462.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1473.0,
+        "run_time": 3675.5066573619843,
+        "gamma": 0.00746775288526816,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID3.txt": {
+        "score": 1457.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1458.0,
+        "run_time": 3675.614369869232,
+        "gamma": 0.0006858710562414266,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID0.txt": {
+        "score": 1462.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1470.0,
+        "run_time": 3676.142460346222,
+        "gamma": 0.005442176870748299,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID26.txt": {
+        "score": 1466.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1467.0,
+        "run_time": 3675.882593870163,
+        "gamma": 0.0006816632583503749,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID14.txt": {
+        "score": 1463.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1468.0,
+        "run_time": 3676.083774805069,
+        "gamma": 0.0034059945504087193,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID25.txt": {
+        "score": 1469.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1469.0,
+        "run_time": 3676.0624856948853,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID19.txt": {
+        "score": 1456.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1467.0,
+        "run_time": 3676.21400642395,
+        "gamma": 0.007498295841854124,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID5.txt": {
+        "score": 1463.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1471.0,
+        "run_time": 3676.400265932083,
+        "gamma": 0.005438477226376614,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID23.txt": {
+        "score": 1470.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1469.0,
+        "run_time": 3676.2499690055847,
+        "gamma": -0.0006807351940095302,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID2.txt": {
+        "score": 1463.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1467.0,
+        "run_time": 3676.501986503601,
+        "gamma": 0.0027266530334014998,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID4.txt": {
+        "score": 1480.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1479.0,
+        "run_time": 3676.9171571731567,
+        "gamma": -0.000676132521974307,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID9.txt": {
+        "score": 1459.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1458.0,
+        "run_time": 3677.1620371341705,
+        "gamma": -0.0006858710562414266,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID24.txt": {
+        "score": 1462.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1470.0,
+        "run_time": 3677.021013736725,
+        "gamma": 0.005442176870748299,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID17.txt": {
+        "score": 1464.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1466.0,
+        "run_time": 3677.236109972,
+        "gamma": 0.001364256480218281,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID22.txt": {
+        "score": 1468.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1474.0,
+        "run_time": 3677.227819442749,
+        "gamma": 0.004070556309362279,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID18.txt": {
+        "score": 1475.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1475.0,
+        "run_time": 3677.4040954113007,
+        "gamma": 0.0,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID8.txt": {
+        "score": 1471.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1474.0,
+        "run_time": 3677.7804279327393,
+        "gamma": 0.0020352781546811396,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID6.txt": {
+        "score": 1466.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1469.0,
+        "run_time": 3677.8234219551086,
+        "gamma": 0.0020422055820285907,
+        "init_temp": 1.5
+    },
+    "data/syn/powerlaw_500_ID29.txt": {
+        "score": 1469.0,
+        "num_iterations": 200000,
+        "max_iterations": 200000,
+        "seed": 0,
+        "stop_score": 1468.0,
+        "run_time": 3712.0804641246796,
+        "gamma": -0.0006811989100817438,
+        "init_temp": 1.5
+    }
+}
