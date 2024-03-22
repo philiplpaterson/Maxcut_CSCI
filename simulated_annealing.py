@@ -68,7 +68,7 @@ def get_init_guess(graph: nx.Graph):
 
 	return init_guess
 
-def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph, seed, stop_score=None, stop_time=None, do_pbar=True) -> (int, Union[List[int], np.array], List[int]):
+def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph, seed, stop_score=None, stop_time=None, do_pbar=True):
 
 	np.random.seed(seed)
 	random.seed(seed)
@@ -147,7 +147,7 @@ def flip_one_value_vectorized(tensor):
 	flipped_matrices = (identity + tensor.repeat(n, 1)) % 2
 	return flipped_matrices
 
-def simulated_annealing_tensor(init_temp:float, num_steps: int, graph: nx.Graph, seed, stop_score=None, stop_time=None, do_pbar=True) -> (int, Union[List[int], np.array], List[int]):
+def simulated_annealing_tensor(init_temp:float, num_steps: int, graph: nx.Graph, seed, stop_score=None, stop_time=None, do_pbar=True):
 
 	np.random.seed(seed)
 	random.seed(seed)
@@ -241,25 +241,15 @@ def simulated_annealing_tensor(init_temp:float, num_steps: int, graph: nx.Graph,
 if __name__ == '__main__':
 	#goal 1475...
 	# read data
-	graph = read_nxgraph('data/syn/powerlaw_500_ID10.txt')
-	init_temperature = 2.5 #Best so far
-	num_steps = 100000 #Best so far
-	# init_temperature = 1.5
-	# num_steps = 10000
-	result = simulated_annealing(init_temperature, num_steps, graph, 0, stop_score=1473, stop_time=3600)
+	graph = read_nxgraph('data/syn/powerlaw_500_ID11.txt')
+	#init_temperature = 1.5 #Best so far
+	#num_steps = 100000 #Best so far
+	init_temperature = 1.5
+	num_steps = 200000
+	result = simulated_annealing(init_temperature, num_steps, graph, 0)
 
-	print('Solution:', result[1])
-	print('Gamma:', (1473.0-result[0])/1473.0)
-
-	graph = read_nxgraph('data/syn/powerlaw_500_ID10.txt')
-	init_temperature = 2.5 #Best so far
-	num_steps = 100000 #Best so far
-	# init_temperature = 1.5
-	# num_steps = 10000
-	result = simulated_annealing(init_temperature, num_steps, graph, 0, stop_score=1473, stop_time=3600)
-
-	print('Solution:', result[1])
-	print('Gamma:', (1473.0-result[0])/1473.0)
+	# print('Solution:', result[1])
+	# print('Gamma:', (1473.0-result[0])/1473.0)
 
 	# import matplotlib.pyplot as plt
 
@@ -272,11 +262,11 @@ if __name__ == '__main__':
 	# # read data
 	# graph = read_nxgraph('data/syn/powerlaw_500_ID0.txt')
 	# init_temp = 2.5
-	# num_steps = 100000 #Best so far
-	# sa_score, sa_solution, best_scores, scores= simulated_annealing_tensor(init_temp, num_steps, graph)
+	# num_steps = 200000 #Best so far
+	# result = simulated_annealing_tensor(init_temp, num_steps, graph, 0)
 
-	# print('Solution:', sa_solution.to('cpu').numpy())
-	# print('Gamma:', (1470-sa_score.to('cpu').item())/1470)
+	# print('Solution:', result[1].to('cpu').numpy())
+	# print('Gamma:', (1470-result[0].to('cpu').item())/1470)
 	# print('Temp:', init_temp)
 
 	# plt.plot(best_scores[:,1],best_scores[:,0], label='Best Score')

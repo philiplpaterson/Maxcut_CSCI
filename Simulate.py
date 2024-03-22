@@ -38,12 +38,10 @@ def sim_annealing_wrapper(file, init_temp, num_steps, stop_score, seed, do_pbar)
 		results[file]['init_temp'] = init_temp
 
 
-def parrallel_sim_annealing_wrapper(file, stop_score, seed, do_pbar):
+def parrallel_sim_annealing_wrapper(file, init_temp, num_steps, stop_score, seed, do_pbar):
 	graph = read_nxgraph(file)
-	init_temp = 2.5
-	num_steps = 200000 	#Just set really high so it doesnt quit at a specific step
 	start_time = time.time()
-	data = simulated_annealing_tensor(num_steps, graph, init_temp, seed, do_pbar=do_pbar)
+	data = simulated_annealing_tensor(init_temp, num_steps, graph, seed, do_pbar=do_pbar)
 
 	with results_lock:
 		results[file] = dict()
@@ -62,8 +60,8 @@ def parrallel_sim_annealing_wrapper(file, stop_score, seed, do_pbar):
 
 #parameters
 seed = 0
-num_steps = 200000 #Max seems to be around 250k in 1hr
-init_temp = 1.5
+num_steps = 1000 #Max seems to be around 250k in 1hr
+init_temp = 2.5
 
 #itterate through graphs
 threads = []
@@ -79,8 +77,8 @@ for thread in threads:
 	thread.join()
 
 #Save results
-filename = 'simulated_annealing_results3.json'
-pretty_filename = 'simulated_annealing_results_pretty3.json'
+filename = 'test.json'
+pretty_filename = 'test_pretty3.json'
 f = open(filename, 'w')
 json.dump(results, f, indent = 4)
 f.close()
