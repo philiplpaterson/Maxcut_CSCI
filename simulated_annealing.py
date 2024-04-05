@@ -199,7 +199,9 @@ def simulated_annealing_tensor(init_temp:float, num_steps: int, graph: nx.Graph,
 
 		# 	curr_solution = new_solutions[sampled_index]
 		# 	curr_score = new_scores[sampled_index]
-
+		#[ 0 1 0 ]
+		#[ 1 0 0 ]
+		#[ 0 1 1 ]
 		delta_e = curr_score - new_scores[best_sol_idx]
 		temp = curr_score
 		if delta_e < 0:
