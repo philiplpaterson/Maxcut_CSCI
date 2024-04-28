@@ -32,7 +32,7 @@ def genetic_vectorized(num_generations: int, population_size:int, init_temp: int
 	num_nodes = graph.number_of_nodes()
 
 	if do_pbar:
-		pbar = tqdm.tqdm(range(num_generations), f'Simulated Annealing, Score: {best_score}')
+		pbar = tqdm.tqdm(range(num_generations), f'Genetic Score: {best_score}')
 
 	#generate initial population
 	population = (torch.rand((population_size, num_nodes), device=device)<0.5).to(torch.int8)
@@ -74,14 +74,14 @@ def genetic_vectorized(num_generations: int, population_size:int, init_temp: int
 
 		if do_pbar:
 			#pbar.set_description(f'Score: {best_score}, temp: {temp:.3f}, div: {calculate_population_diversity(population):.3f}')
-			pbar.set_description(f'Score: {best_score}, temp: {temp:.3f}')
+			pbar.set_description(f'Genetic Score: {best_score}, temp: {temp:.3f}')
 			pbar.update()
 
 	return best_solution, best_score
 
 from util import obj_maxcut
 import copy
-def simulated_annealing(init_guess:np.ndarray, init_temperature: int, num_steps: int, graph: nx.Graph, seed:int, do_pbar=True):
+def simulated_annealing_gen(init_guess:np.ndarray, init_temperature: int, num_steps: int, graph: nx.Graph, seed:int, do_pbar=True):
 
 	np.random.seed(seed)
 	random.seed(seed)
@@ -178,7 +178,7 @@ if __name__ == '__main__':
 		'do_pbar': True
 	}
 
-	best_sol, score = simulated_annealing(**simulated_annealing_params)
+	best_sol, score = simulated_annealing_gen(**simulated_annealing_params)
 
 
 	# for i in range(30):
