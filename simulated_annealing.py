@@ -74,15 +74,18 @@ def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph, 
 	random.seed(seed)
 	torch.manual_seed(seed)
 
+	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 	adj_matrix = nx.to_numpy_array(graph)
+	adj_matrix = torch.tensor(adj_matrix, device=device) #<-----
 	num_nodes = graph.number_of_nodes()
 
 	#init_solution = np.concatenate((np.zeros(num_nodes // 2, dtype=int), np.ones(num_nodes // 2, dtype=int)))
 	init_solution = get_init_guess(graph)
 
 	start_time = time.time()
-	curr_solution = copy.deepcopy(init_solution)
-	curr_score = obj_maxcut(curr_solution, adj_matrix)
+	curr_solution = torch.tensor(copy.deepcopy(init_solution), device=device) #<-------
+	curr_score = obj_maxcut_batch(curr_solution.reshape(1, curr_solution.shape[0]), adj_matrix)[0].item() #<-------
 	init_score = curr_score
 
 	best_solution = curr_solution
@@ -99,11 +102,11 @@ def simulated_annealing(init_temperature: int, num_steps: int, graph: nx.Graph, 
 		# The temperature decreases
 		temperature = init_temperature * (1 - (k + 1) / num_steps)
 
-		new_solution = curr_solution.copy()
+		new_solution = curr_solution.clone()
 		new_solution[k%num_nodes] = (new_solution[k%num_nodes] + 1) % 2
 		ctr+=1
 
-		new_score = obj_maxcut(new_solution, adj_matrix)
+		new_score = obj_maxcut_batch(new_solution.reshape(1, curr_solution.shape[0]), adj_matrix)[0].item()
 
 		delta_e = curr_score - new_score
 		if delta_e < 0 or ctr>=num_nodes:

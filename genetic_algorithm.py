@@ -94,7 +94,7 @@ def simulated_annealing_gen(init_guess:np.ndarray, init_temperature: int, num_st
 	init_solution = init_guess
 
 	curr_solution = copy.deepcopy(init_solution)
-	curr_score = obj_maxcut(curr_solution, adj_matrix)
+	curr_score = obj_maxcut(curr_solution, adj_matrix)[0]
 
 	best_solution = curr_solution
 	best_score = curr_score
@@ -110,7 +110,9 @@ def simulated_annealing_gen(init_guess:np.ndarray, init_temperature: int, num_st
 		new_solution[k%num_nodes] = (new_solution[k%num_nodes] + 1) % 2
 		ctr+=1
 
-		new_score = obj_maxcut(new_solution, adj_matrix)
+
+		print(new_solution.shape)
+		new_score = obj_maxcut(new_solution.reshape(1,new_solution.shape[0]), adj_matrix)[0]
 		if new_score>best_score:
 			best_score = new_score
 			best_solution = new_solution
